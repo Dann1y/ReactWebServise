@@ -28,6 +28,18 @@ const movies =[
 //메인 컴포넌트가 데이터를 다 갖고 있음
 //.map을 사용하여 해당 항목을 맵핑하고 새로운 리스트를 만듦
 class App extends Component {
+
+  // Render: componentWillMount() -> render() -> componentDidMount()
+
+  // Update: componentWillReceiveProps() -> shouldComponentUpdate() == true -> componentWillUpdate() -> render() -> componentDidUpdate()
+  
+  componentWillMount() {
+
+  }
+  componentDidMount() {
+
+  }
+  
   render() {
     return (
       <div className="App">
