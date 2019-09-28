@@ -23,7 +23,14 @@ class App extends Component {
   //리액트 자체 함수와 나의 함수에 차이를 두기위해 _를 사용함
   _renderMovies = () => {
     const movies = this.state.movies.map((movie, index) => {
-      return <Movie title={movie.title} poster={movie.large_cover_image} key={movie.id} />
+      console.log(movie)
+      return <Movie
+      title = {movie.title_english}
+      poster = {movie.medium_cover_image}
+      key = {movie.id}
+      genres = {movie.genres}
+      synopsis = {movie.synopsis}
+      />
     })
     return movies
   }
