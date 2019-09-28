@@ -18,6 +18,9 @@ class App extends Component {
 //Ajax의 A가 Asynchronous인 이유
   componentDidMount() {
     fetch('https://yts.lt/api/v2/list_movies.json?sort_by=rating')
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(err => console.log(err)) 
   }
 
   //리액트 자체 함수와 나의 함수에 차이를 두기위해 _를 사용함
