@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+//import PropTypes from 'prop-types';
 import './Movie.css';
+
+/*smart component
 
 class Movie extends Component{
 
@@ -18,21 +20,32 @@ class Movie extends Component{
         )
     }
 }
+*/
 
-//필수요건으로 지정후 데이터가 없을경우 메세지 받음
-class MoviePoster extends Component{
-
-    static propTypes = {
-        poster: PropTypes.string.isRequired
-    }
-
-    render() {
-        return(
-            <img src={this.props.poster} alt="빡빡이들"/>
-        )
-    }
+//no state,function render,lifecycle
+//just return => dumb component
+function Movie({title,poster}) {
+    return (
+//class가 아니므로 this.props는 삭제
+        <div>
+            <MoviePoster poster={poster} />
+            <h1>{title}</h1>
+        </div>   
+    )
 }
+
+// const Movie = () => (
+//     <div>
+//         <MoviePoster poster={poster} />
+//         <h1>{title}</h1>
+//     </div>      
+// )
+
+function MoviePoster({poster}) {
+    return (
+        <img src={poster} alt="빡빡이들"/>
+    )
     
-    
+}
 
 export default Movie;

@@ -6,6 +6,7 @@ import Movie from './Movie';
 //.map을 사용하여 해당 항목을 맵핑하고 새로운 리스트를 만듦
 class App extends Component {
 
+  //cycle
   // Render: componentWillMount() -> render() -> componentDidMount()
 
   // Update: componentWillReceiveProps() -> shouldComponentUpdate() == true -> componentWillUpdate() -> render() -> componentDidUpdate()
