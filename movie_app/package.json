@@ -17,7 +17,7 @@
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "http://skypedanny.github.io/movie_app",
+  "homepage": "http://skypedanny.github.io/ReactWebServise",
   "eslintConfig": {
     "extends": "react-app"
   },
