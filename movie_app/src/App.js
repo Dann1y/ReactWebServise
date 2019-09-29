@@ -44,16 +44,17 @@ class App extends Component {
   }
 
   _callApi = () => {
-    return fetch('https://yts.lt/api/v2/list_movies.json?sort_by=rating')
+    return fetch('https://yts.lt/api/v2/list_movies.json?sort_by=download count')
     .then(response => response.json())
     .then(json => json.data.movies)
     .catch(err => console.log(err))
   }
 
   render() {
+    const { movies } = this.state;
     return (
-      <div className="App"> 
-        {this.state.movies ? this._renderMovies() : 'Loading'}
+      <div className={movies ? "App" : "App--Loading"}> 
+        {movies ? this._renderMovies() : 'Loading'}
       </div>
     );
   }
